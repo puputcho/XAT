@@ -1,0 +1,13 @@
+h1, h3{
+    font-family: 'Silkscreen';
+}
+#username{
+    font-family: 'Silkscreen';
+}
+#loginButton{
+    font-family: 'Silkscreen';
+}
+img{
+    border-radius: 200px;
+    height: 200px;
+}
