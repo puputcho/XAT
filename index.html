@@ -14,7 +14,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"> </script>
     <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"> </script>
 
-    <script src="Kwitter.js"></script>
+
     <link rel="stylesheet" href="Kwitter.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,15 +23,16 @@
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
-<body>
+<body style="background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);">
     <center>
         <h1>Xat - O lugar em que você cria a notícia. <br><sup>Rapido e facil!</sup></h1>
         <img src="up.gif">
         <h3>username</h3>
-        <input type="text" id="username" class="form-control">
-        <p><sup><b>*letras maiúsculas e minusculas irão aparecer em seu nome de usuário, mas não na caixa de texto acima</b></sup></p>
+        <input type="text" class="form-control" id="username">
         <button id="loginButton" class="btn btn-primary" onclick="addUser()">Sign-in</button>
-    </center>
+    </center> 
+    <script src="Kwitter.js"></script>  
 </body>
 
 </html>

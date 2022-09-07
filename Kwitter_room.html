@@ -16,10 +16,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Kwitter_room.css">
-    <script src="kwitter_room.js"></script>
+
 </head>
 <body>
     <div class="right"><button class="glyphicon glyphicon-log-out btn btn-danger" onclick="logout()">Logout</button></div>
-    
+    		<center>
+        <h1 style="font-family: Silkscreen;">	
+                XAT
+			<sup>
+				<img src="up.gif" width="80" style="border-radius: 100px;">
+			</sup>
+		</h1>
+		<h3 id="username" class="color_white" style="font-family: Silkscreen;"></h3>
+
+		<div class="form-group input_div_room_page">
+			<label>#Adicionar Sala:</label>
+			<input type="text" id="roomName" class="form-control" placeholder="#Nome da Sala">
+		</div>
+		
+		<button onclick="addRoom();" class="btn btn-success">#Adicionar Sala</button>
+
+		<h3 class="color_white">#SALASTRENDING</h3>
+
+		<div id="output"></div>
+    </center>
+        <script src="kwitter_room.js"></script>
 </body>
 </html>

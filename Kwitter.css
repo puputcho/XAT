@@ -2,7 +2,7 @@ h1, h3{
     font-family: 'Silkscreen';
 }
 #username{
-    font-family: 'Silkscreen';
+    text-align: center;
 }
 #loginButton{
     font-family: 'Silkscreen';
@@ -10,4 +10,5 @@ h1, h3{
 img{
     border-radius: 200px;
     height: 200px;
+    
 }

@@ -13,3 +13,33 @@ const firebaseConfig = {
     measurementId: "G-TFP9EVMBQ2"
   };
 firebase.initializeApp(firebaseConfig);
+nome = localStorage.getItem('username');
+document.getElementById('username').innerHTML = 'Olá, '+nome+', bora usar o xat?';
+function addRoom() {
+  newRoom = document.getElementById('roomName').value;
+  console.log(newRoom);
+
+  firebase.database().ref("/").child(newRoom).update({
+    purpose : "adicionar sala"
+  });
+  localStorage.setItem("roomName", newRoom);
+   window.location ='kwitterPage.html';
+}
+function getData() {  firebase.database().ref("/").on('value', function(snapshot) 
+{ document.getElementById("output").innerHTML = ""; snapshot.forEach(function(childSnapshot) 
+    { childKey  = childSnapshot.key;
+roomNames = childKey;
+console.log("Nome da Sala - " + roomNames);
+row = "<div class='roomName' id="+roomNames+" onclick='redirectToRoomName(this.id)' >#"+ roomNames +"</div><hr>";
+document.getElementById("output").innerHTML += row;
+});
+});
+
+}
+getData();
+
+function redirectToRoomName(name){
+console.log(name);
+localStorage.setItem('roomName', name);
+window.location ='kwitterPage.html';
+}
