@@ -12,7 +12,7 @@ firebase.initializeApp(firebaseConfig);
 
 username = localStorage.getItem('username');
 roomName = localStorage.getItem('roomName');
-document.getElementById('title').innerHTML = 'XAT - #' + roomName;
+// document.getElementById('title').innerHTML = 'XAT - #' + roomName;
 
 function send() {
     msg = document.getElementById('msg').value;
@@ -20,7 +20,7 @@ function send() {
         name: username,
         message: msg,
     });
-    document.getElementById('msg').innerHTML = '';
+    document.getElementById('msg').value = '';
 }
 function getData() { firebase.database().ref("/" + roomName).on('value', function (snapshot) { document.getElementById("output").innerHTML = ""; snapshot.forEach(function (childSnapshot) { childKey = childSnapshot.key; childData = childSnapshot.val(); if (childKey != "purpose") { firebaseMessageId = childKey; messageData = childData; 
 console.log(firebaseMessageId);
@@ -29,8 +29,8 @@ name = messageData['name'];
 message = messageData['message'];
 nameWithTag = '<h4>' + name + "<img class='user_tick' src='tick.png'></h4>";
 msgWithTag = "<h4 class ='message_h4'>" + message + '</h4>';
-row = nameWithTag + msgWithTag + spanWithTag;
-document.getElementById('output').innerHTML = row;
+row = nameWithTag + msgWithTag;
+document.getElementById('output').innerHTML += row;
 } }); }); }
 getData();
 function logout() {
