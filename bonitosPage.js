@@ -28,7 +28,7 @@ console.log(messageData);
 name = messageData['name'];
 message = messageData['message'];
 nameWithTag = '<h4>' + name + "<img class='user_tick' src='tick.png'></h4>";
-msgWithTag = "<h4 class ='message_h4'>" + message + '</h4>';
+msgWithTag = "<h4 class ='message_h4'>" + message + '</h4><hr>';
 row = nameWithTag + msgWithTag;
 document.getElementById('output').innerHTML += row;
 } }); }); }
