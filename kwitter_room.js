@@ -3,15 +3,15 @@ function logout() {
     window.location = 'index.html'
 }
 const firebaseConfig = {
-    apiKey: "AIzaSyCPmFMRsK2OmOAVecO2BTfI0srhKZhzNJw",
-    authDomain: "xat-1e828.firebaseapp.com",
-    databaseURL: "https://xat-1e828-default-rtdb.firebaseio.com",
-    projectId: "xat-1e828",
-    storageBucket: "xat-1e828.appspot.com",
-    messagingSenderId: "1000654827269",
-    appId: "1:1000654827269:web:8b5aff0e1314c4e918d16c",
-    measurementId: "G-TFP9EVMBQ2"
-  };
+  apiKey: "AIzaSyC7_1OslKddd25033CM98LA7pIvHFMahxQ",
+  authDomain: "xatcom-e1b79.firebaseapp.com",
+  databaseURL: "https://xatcom-e1b79-default-rtdb.firebaseio.com",
+  projectId: "xatcom-e1b79",
+  storageBucket: "xatcom-e1b79.appspot.com",
+  messagingSenderId: "141497563702",
+  appId: "1:141497563702:web:43d9f89a465e5840e47697",
+  measurementId: "G-SMH5YSTNX0"
+};
 firebase.initializeApp(firebaseConfig);
 nome = localStorage.getItem('username');
 document.getElementById('username').innerHTML = 'Olá, '+nome+', bora usar o xat?';
